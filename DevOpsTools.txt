@@ -1,1 +1,19 @@
-#Tools info...
+#PCF training tools:
+
+Paper: https://papertrailapp.com/ kri***-p***.****@*mini. M@***6
+
+GitLab: https://gitlab.com/ kmu*ra M@***6
+
+Github www.github.com/kmuppara kmu*ra M@***6
+
+Pivotal(PCF): https://run.pivotal.io kri***-p***.***@*mini. M@***6
+
+Heroku Cloud Foundry https://id.heroku.com/login kpk****48@g***. M@***6
+
+MongoDB NoSQL https://cloud.mongodb.com/user#/atlas/login kpk****48@g***. M@***6
+
+AppDynamic: https://www.appdynamics.com kri***-p***.***@*mini. M@***6 nikola2018032902274716.saas.appdynamics.com:443
+
+AWS Console: https://console.aws.amazon.com  kri***-p**.***@*mini. M@***6
+
+Alexa Console: https://developer.amazon.com/alexa/console/ask  kri***-p***.***@*mini. M@***6
