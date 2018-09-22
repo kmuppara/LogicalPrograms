@@ -1,1 +1,20 @@
 #How to setup and use EclEmma Code coverage tool in STS
+
+SetUp:
+1. In STS navigate to Eclipse Marketplace (Help->Eclipse Marketplace)
+2. Search for EclEmma and install it
+3. Restart the STS
+
+Use:
+1. Right click on the project which you want to analyze and click "Coverage as" -> "Junit Test"
+     a. Also run "Coverage As" on a single test file if want to test only one file.
+2. Let it run. You may see an error "No coverage data has been collected during this coverage session. 
+   Please do not terminate the java process manually from eclipse." Just ignore this.
+3. To see the results, go to source code. It should be highlighted as follows.
+    a. Green for fully covered.
+    b. Yellow for partially covered lines.
+    c. Red for not been executed line.
+    EclEmma will also highlight the test file as well but ignore this.
+4. To see code coverage in terms of %, navigate to "Windows" -> Show View -> Other -> and search for Coverage.
+
+Note: For more info, go to http://www.eclemma.org/index.html
