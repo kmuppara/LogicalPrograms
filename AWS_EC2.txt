@@ -1,0 +1,17 @@
+#AWS EC2 cloud server instance access steps (AIForChange Hackathon by Capg)
+
+Connect to your AWS instance:
+Open Git bash and execute below commands::
+
+1.  cd /Users/your_username/Downloads/< your .pem filename> 
+    Note: .pem file will be generated while creating AWS EC2 instance.
+
+2.  chmod 0400 <your .pem filename>
+
+3.  ssh -L localhost:8888:localhost:8888 -i <your .pem filename> ubuntu@
+
+4.  In the terminal, use the command: jupyter notebook
+
+Note:
+* We have used anaconda environment management package while creating EC2 instance.
+* It provides access to Pandas, TensorFlow, Jupyter Notebook and many inbuilt tools.
