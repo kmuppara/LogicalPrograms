@@ -6,4 +6,7 @@
 4. AWS_EC2: EC2 instance access steps from anywhere to create model for AI
 
 MachineLearning Example:
+Classification Ex:
 https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
+Regression Ex:
+http://devarea.com/python-machine-learning-example-linear-regression/#.W6djimgzbIU
