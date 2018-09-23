@@ -1,0 +1,23 @@
+Stock_Market = pd.read_csv(r'C:\Users\Doron E\Desktop\Economy.csv')
+df = DataFrame(Stock_Market,columns=['Year','Month','Interest_Rate','Unemployment_Rate','Stock_Index_Price'])
+
+Before start building model, we need to convert all the text values into numbers. We can do it in many ways:
+df.replace({ 'sex': {'Male':0 , 'Female':1} , 'smoker' : {'No': 0 , 'Yes': 1}} ,inplace=True)
+df.head()
+
+Types of Regression Algorithms::
+Linear Regression
+Logistic Regression			used to find the probability of event=Success and event=Failure
+Polynomial Regression
+Stepwise Regression
+Ridge Regression
+Lasso Regression
+ElasticNet Regression
+
+Types of Classification Algorithms::
+Logistic Regression (LR)
+Linear Discriminant Analysis (LDA)
+K-Nearest Neighbors (KNN).
+Classification and Regression Trees (CART).
+Gaussian Naive Bayes (NB).
+Support Vector Machines (SVM).
