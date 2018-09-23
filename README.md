@@ -8,5 +8,7 @@
 MachineLearning Example:
 Classification Ex:
 https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
-Regression Ex:
+Regression Ex1:
 http://devarea.com/python-machine-learning-example-linear-regression/#.W6djimgzbIU
+Regresson Ex2
+https://www.kaggle.com/erick5/predicting-house-prices-with-machine-learning
