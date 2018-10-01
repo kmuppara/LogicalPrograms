@@ -1,13 +1,14 @@
-
 List -> ArrayList, LinkedList, Vector are the classes under list interface.
 
 ArrayList ->
 	1. Resizable array. As more elements are added to ArrayList, its size is increased dynamically.
 	2. Default initial capacity 10. Vector each time doubles its array size, while ArrayList grow 50% of its size each time not capacity.
+	
 LinkedList ->
 	1. Implemented as a double linked list.
 	2.Performance on add and remove is better than Arraylist, but worse on get and set methods.
 	3. LinkedList, however, also implements Queue interface which adds more methods than ArrayList and Vector, such as offer(), peek(), poll(), etc.
+	
 Vector ->
 	1. Similar with ArrayList, but it is synchronized.
 	
@@ -18,16 +19,3 @@ Vector ->
 		4. object get(int index) -> return the object stored at the specified index within the invoking collection.
 		5. ListIterator listIterator() -> return an iterator to the start of the invoking list.
 
-Java Cursors ->  Enumeration, Iterator, ListIterator, Spliterator, EnhacedForloop. ->To traverse thru collection elements.
-	Enumeration ->
-		1. It is available since Java 1.0 and legacy interface.
-		2. Compare to other Cursors, it has very lengthy method names: hasMoreElements() and nextElement().
-		3. In CRUD Operations, it supports only READ operation. Does not support CREATE, UPDATE and DELETE operations.
-		4. It supports only Forward Direction iteration. That’s why it is also know as Uni-Directional Cursor.
-		5. It is not recommended to use it in new code base or projects.
-	Iterator ->
-		1. It is available since Java 1.2 Collection Framework.
-		2. It is applicable for all Collection classes. So it is also known as Universal Java Cursor.
-		3. It supports both READ and REMOVE Operations.
-		4. Compare to Enumeration interface, Iterator method names are simple and easy to use. hasNext(), next(), remove().
-	ListIterator ->
