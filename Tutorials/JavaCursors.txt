@@ -1,0 +1,87 @@
+Java Cursors ->  Enumeration, Iterator, ListIterator, Spliterator, EnhacedForloop. ->To traverse thru collection elements.
+
+	Enumeration ->
+		1. It is available since Java 1.0 and legacy interface.
+		2. Compare to other Cursors, it has very lengthy method names: hasMoreElements() and nextElement().
+		3. In CRUD Operations, it supports only READ operation. Does not support CREATE, UPDATE and DELETE operations.
+		4. It supports only Forward Direction iteration. That’s why it is also know as Uni-Directional Cursor.
+		5. It is not recommended to use it in new code base or projects.
+		Ex: 
+			Vector v=new Vector();
+			for(int i=0;i<=10;i++)
+			{ v.addElement(i); }
+			Enumeration e=v.elements();
+			while(e.hasMoreElements())
+			{ System.out.println((Integer)e.nextElement()); }
+      
+	Iterator ->
+		1. It is available since Java 1.2 Collection Framework.
+		2. It is applicable for all Collection classes. So it is also known as Universal Java Cursor.
+		3. It supports both READ and REMOVE Operations.
+		4. Compare to Enumeration interface, Iterator method names are simple and easy to use. 
+		Methods -> hasNext(), next(), remove().
+		Ex: 
+			Vector v=new Vector();
+			for(int i=0;i<=10;i++)
+			{ v.addElement(i); }
+			Iterator  itr=v.iterator();
+			while(itr.hasNext())
+			{ System.out.println((Integer)itr.next()); }
+      
+	ListIterator ->
+		1. It is available since Java 1.2.
+		2. It extends Iterator interface.
+		3. It is useful only for List implemented classes.
+		4. Unlike Iterator, It supports all four operations: CRUD (CREATE, READ, UPDATE and DELETE).
+		5. Unlike Iterator, It supports both Forward Direction and Backward Direction iterations.
+		6. It has no current element; its cursor position always lies between the element that would be returned by a call to previous() and the element that 	would be returned by a call to next().
+		Methods -> hasNext(), next(), remove(), hasPrevious(), previous(), set(), add() etc.
+		Ex:
+			List<String> names = new LinkedListt<>();
+			names.add("Rams");
+			names.add("Posa");
+			names.add("Chinni");
+			// Getting ListIterator
+			ListIterator<String> namesIterator = names.listIterator();
+			
+			// Traversing elements
+			System.out.println("Forward Direction Iteration:");
+			while(listIterator.hasNext()){
+				System.out.println(listIterator.next());			
+			}	
+			
+			// Traversing elements
+			System.out.println("Backward Direction Iteration:");
+			while(listIterator.hasPrevious()){
+				System.out.println(listIterator.previous());			
+			}	
+      
+	Spliterator ->
+		1. Spliterator is introduced in Java 8 release in java.util package.
+		2. It supports Parallel Programming functionality.
+		3. We can use it for both Collection API and Stream API classes.
+		4. We can NOT use this Iterator for Map implemented classes.
+		5. It uses tryAdvance() method to iterate elements individually in multiple Threads to support Parallel Processing.
+		6. It uses forEachRemaining() method to iterate elements sequentially in a single Thread.
+		7. It uses trySplit() method to divide itself into Sub-Spliterators to support Parallel Processing.
+		8. Spliterator supports both Sequential and Parallel processing of data.
+		Ex: 
+			List<String> names = new ArrayList<>();
+			names.add("Rams");
+			names.add("Posa");
+			names.add("Chinni");
+				
+			// Getting Spliterator
+			Spliterator<String> namesSpliterator = names.spliterator();
+				
+			// Traversing elements
+			namesSpliterator.forEachRemaining(System.out::println);
+      
+	ForEach(EnhacedForloop) ->
+		1. Arrays and collections support ForEach
+		Ex:
+			 char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+			 // foreach loop
+			 for (char item: vowels) {
+				System.out.println(item);
+			 }
