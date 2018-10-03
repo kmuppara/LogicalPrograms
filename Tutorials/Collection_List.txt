@@ -19,3 +19,13 @@ Vector ->
 		4. object get(int index) -> return the object stored at the specified index within the invoking collection.
 		5. ListIterator listIterator() -> return an iterator to the start of the invoking list.
 
+Stack ->
+	1. Java Stack is LIFO object. It extends Vector class, but supports only five operations. 
+	2. Java Stack class has only one constructor which is empty or default constructor. 
+	Methods:
+		1. boolean empty(): Tests if this stack is empty.
+		2. E peek(): Looks at the object at the top of this stack without removing it from the stack.
+		3. E pop() : Removes the object at the top of this stack and returns that object as the value of this function.
+		4. E push(E item) : Pushes an item onto the top of this stack.
+		5. int search(Object o) : Returns the 1-based position where an object is on this stack.
+
