@@ -1,0 +1,31 @@
+Set -> HashSet, LinkedHashSet, TreeSet
+	
+	1. Unlike List, Set DOES NOT allow you to add duplicate elements.
+	2. Set allows you to add at most one null element only.
+	3. Set interface got one default method in Java 8: spliterator.
+	4. Unlike List and arrays, Set does NOT support indexes or positions of it’s elements.
+	
+	Methods: 
+		1. boolean add(E e): Adds the specified element to this set if it is not already present (optional operation).
+		2. boolean remove(Object o): Removes the specified element from this set if it is present (optional operation).
+		3. boolean contains(Object o): Returns true if this Set contains the specified element.
+		4. Iterator iterator(): Returns an iterator over the elements in this set. The elements are returned in no particular order. etc
+	
+Array to Set:
+	String[] vowels = {"a","e","i","o","u"};
+	Set<String> vowelsSet = new HashSet>(Arrays.asList(vowels));
+			(or)
+	Collections.addAll(vowelsSet, vowels); 
+	System.out.println(vowelsSet);
+Set to Array:
+	Set<String< vowelsSet = new HashSet<>();
+	// add example
+	vowelsSet.add("a");
+	vowelsSet.add("e");
+	//convert Set to Array
+	String strArray[] = vowelsSet.toArray(new String[vowelsSet.size()]);
+	System.out.println(Arrays.toString(strArray)); 
+Set Sorting:
+	Set<Integer> intsSet = new HashSet<>();
+	Set<Integer> sortedSet = new TreeSet<>(intsSet);
+	System.out.println("Sorted Set: " + sortedSet);
