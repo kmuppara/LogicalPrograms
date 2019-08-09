@@ -1,1 +1,50 @@
 
+1. Use intention revealing names: 
+Wrong: int d; // elapsed time in days
+Right: int elapsedTimeInDays;
+
+2. Avoid Disinformation:
+Wrong: hp or kp
+Right: hypotenuse or krishnaPrasad;
+
+Wrong: accountList unless it's actually a List
+Right: accountGroup or bunchOfAccounts or accounts
+
+* don't use lower-case L or uppercase O as variable names because they look almost like constants one and zero, respectively.
+* if there is a Product class then don't create another class with names like ProductInfo or ProductData etc.. these are called noise words.
+
+2. Use Pronounceable Name:
+Wrong: Date genymdhms;
+Right: Date generationTimestamp;
+Example: "Hey, Krishna, take a look at this record! The generation timestamp is set to tomorrow's date! How can that be?"
+
+3. Use Searchable Names:
+Wrong: 7
+Right: MAX_CLASSES_PER_STUDENT
+* Single letter names and numeric constants have a particular problem in that they are not easy to locate across a body of text.
+* The lenght of a name should correspond to the size of its scope.
+
+4. Class Names:
+* Classes and Objects should have noun or noun phrase names like Customer, WikiPage, Account, and AddressParser. Class name should not be a verb.
+
+5. Method Names:
+* Mehtods should have verb or verb phrase names like postPayment, deletePage, or save.
+
+Wrong: Complex fulcrumPoint = new Complex(23.0);
+Right: Complex fulcrumPoint = Complex.FromRealNumber(23.0);
+* When constructors are overloaded, use static factory methods with names that describe the arguments. Consider enforcing their use by making the corresponding constructors private.
+
+6. Don't Be Cute:
+Wrong: whack() or eatMyShorts();
+Right: kill() or abort();
+
+7. Pick One Word per Concept:
+* For instance, it's confusing to have fetch, retrieve, and get as equivalent methods of different classes.
+
+8. Don't Pun:
+* Avoid using the same word for two purpose. 
+Example: Don't use add() for both summing of elements and appending of elements to list.
+
+9. Add Meaingful Context:
+Wrong: firstName, lastName, or street
+Right: addrFirstName, addrLastName, or addrStreet
