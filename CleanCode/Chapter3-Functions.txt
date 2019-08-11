@@ -1,1 +1,43 @@
+Chapter3-Functions:
 
+1. Small: 
+Functions should be small.
+
+2. Blocks and Indenting:
+Blocks within if statements, else statements, while statements, and so on should be one line long. Probably that line should be a function call.
+
+3. Do one thing:
+FUNCTIONS SHOULD DO ONE THING. THEY SHOULD DO IT WELL. THEY SHOULD DO IT ONLY.
+
+4. Reading code from Top to Bottom: The Stepdown Rule:
+The code to read like a top-down narrative. Every function to be followed by those at the next levele of abstraction so that we can read the program, descending one level of abstraction at a time as we can read down the list of functions.
+
+5. Use Descriptive Names:
+Don't be afraid to make a name long. A long descriptive name is better than a short enigmatic name. A long descriptive name is better than a long descriptive comment. 
+Use a naming convention that allows multiple words to be easily read in the function names, and then make use of those multiple words to give the function a name that says what it does.
+
+6. Function Arguments:
+The ideal number of arguments for a fuction is zero(niladic). Next comes one(monadic), followed closely by two(dyadic). Three should be avoided where possible.
+
+7. Argument Objects:
+When a function seems to need more than two or three arguments, it is likely that some of those arguments ought to be wrapped into a class or thier own. 
+Wrong: Circle makeCircle(double x, double y, double radius);
+Right: Circle makeCircle(Point center, double radius);
+
+8. Output Arguments:
+Arguments are most naturally interpreted as inputs to a function. Try to avoid passing output arguments as method arguments.
+
+9. Command Query Separation:
+Functions should either do something or answer something, but not both. Either your function should change the state of an object, or it should return some information about that object.
+Wrong: public boolean set(String attribute, String value);
+
+10. Extract Try/Catch Blocks:
+Extract the bodies of the try and catch blocks out into functions of thier own. 
+Right: 
+try{ deletePageAndAllReferences(page);
+}
+catch(Exception e){ logError(e);
+}
+
+11. Error Handling is One Thing:
+Functions should do one thing. Error handling is one thing. Thus, a function that handles errors should do nothing else.
