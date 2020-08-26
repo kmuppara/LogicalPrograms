@@ -1,0 +1,43 @@
+1. SQL Injection: Allows code injection to extract something from app
+	Ex: www.dci.com?id=' or 1=1'
+	Steps:  1. Parameterized queries
+		2. Sanitization or whitelisting
+2. Broken Authentication: Allows manual/automatic methods to try gain access over systems.
+	Ex: Brute force
+	Steps:  1. Avoid week pwds & usernames
+		2. Second level authentication using ddid and strongauth
+		3. Invalidate session after 15 mins & clear session info
+		4. Hashed pwds
+		5. Max login attemps for valid usernames
+3. Sensitive data exposure: Allows exposure of Personal info, cards, credentials
+	Ex: Stored and transmit data
+	Steps:	1. Use SSL secure socket layer (TLS 1.2)
+		2. Hashing or masking while storing in DB.
+		3. Encrypt while transmit
+		4. Encyption using 256 AES alg.
+4. XML External Entities: app that process XML using week XML parsers.
+	Steps:
+		1. Use JSON
+		2. Virus scan utility
+		3. Whitelisting or Sannitizing data
+5. Broken Access Control: Limit on what session or page users and admins can see.
+	Steps:
+		1. Role based access: Validate users while accessing admin URL's
+6. Security Misconfigurations:
+	Steps:	
+		1. Configure Secure Keys in Vault
+		2. Remove unused apps, services & pages
+7. Cross Site Scripting: Inject malicious script into website. Ex: Redirect to malicious sites.
+	Steps:
+		1. Use Sanitization or Blacklisting
+8. Insecure Deserialization:
+	Steps:	
+		1. JWT
+9. Insufficient Logging and Monitoring:
+	Steps:
+		1. Don't print secure info in logs & stack traces
+		2. Using Kanban, AppD
+10. Using Components with known vunlenerabilities
+	Steps:
+		1. Nexus Scan
+		2. Vera code
