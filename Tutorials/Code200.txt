@@ -1,0 +1,7 @@
+Zero downtime credential ration 
+Existing Approach:  As per discover audit norms database user credentials have to be rotated on regular/yearly basis. These new credentials have to be updated in PCF and Non PCF applications. Flow/process for updating credentials:
+For PCF apps: stop app -> rotate credentials -> update in vault -> update environment variables -> restart app.
+For Non PCF apps: stop app -> rotate credentials -> update environment variables -> restart app.	
+This process is partially or not automated in the Discover and Dinersclub applications.
+Disadvantages: Applications downtime, Database user locks, Manual intervention, process documentation efforts. 
+New Proposal: This entire process can be automated with two keys approach for each database user. 
