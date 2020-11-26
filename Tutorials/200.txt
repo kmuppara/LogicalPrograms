@@ -1,13 +1,14 @@
 Zero downtime credential ration 
 Existing Approach:  As per discover audit norms database user credentials have to be rotated on regular/yearly basis. These new credentials have to be updated in PCF and Non PCF applications. Flow/process for updating credentials:
-For PCF apps: stop app -> rotate credentials -> update in vault -> update environment variables -> restart app.
-For Non PCF apps: stop app -> rotate credentials -> update environment variables -> restart app.	
-This process is partially or not automated in the Discover and Dinersclub applications.
+For PCF apps: stop app -> rotate credentials -> update in vault -> update environment variables -> start app.
+For Non PCF apps: stop app -> rotate credentials -> update environment variables -> start app.	
+This process is partially or not at all automated in the Discover and Dinersclub applications.
 Disadvantages: Applications downtime, Database user locks, Manual intervention, process documentation efforts. 
 
 New Proposal:
 Database credentials rotaion process will be automated through a secured Vault Secret Provider(VSP) API which acts as an intermediator between Vault and consumer APIs.
 VSP can be used to fetch encrypted database credentials dynamically during datasource initialization.
 VSP monitors vault secrates and refreshes application's datasource dynamically whenever credentials are updated.
-With this process, there will be no application downtime and no manual intervention required
-Technologies: Vault, AIM, Spring, Java.
+Flow: AIM -> Vault -> VSP -> Consumer API's.
+Advantages: No application restart/downtime, no manual intervention, no database user locks and no documentations. 
+Technologies: Vault, AIM, Spring, Java, PCF.
