@@ -4,8 +4,10 @@ For PCF apps: stop app -> rotate credentials -> update in vault -> update enviro
 For Non PCF apps: stop app -> rotate credentials -> update environment variables -> restart app.	
 This process is partially or not automated in the Discover and Dinersclub applications.
 Disadvantages: Applications downtime, Database user locks, Manual intervention, process documentation efforts. 
+
 New Proposal:
-The entire process will be converted as one click rotation. Application owner has to pass organization and database user as input parameters.
-All the services which are using this database user will be updated with new credentials and notification will be triggered with 
-services and database user health status.
-Technologies: ServiceNow, Jenkins, Linux, Vault, AIM, Spring, Java.
+Database credentials rotaion process will be automated through a secured Vault Secret Provider(VSP) API which acts as an intermediator between Vault and consumer APIs.
+VSP can be used to fetch encrypted database credentials dynamically during datasource initialization.
+VSP monitors vault secrates and refreshes application's datasource dynamically whenever credentials are updated.
+With this process, there will be no application downtime and no manual intervention required
+Technologies: Vault, AIM, Spring, Java.
