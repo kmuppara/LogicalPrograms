@@ -1,4 +1,4 @@
-Zero downtime credential ration 
+******Zero downtime credential rotation********
 Existing Approach:  As per discover audit norms database user credentials have to be rotated on regular/yearly basis. 
 These new credentials have to be updated in PCF and Non PCF applications. 
 Flow/process for updating credentials:
