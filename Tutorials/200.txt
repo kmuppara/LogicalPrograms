@@ -8,9 +8,9 @@ This process is partially or not at all automated in the Discover and Dinersclub
 Disadvantages: Applications downtime, Database user locks, Manual intervention, process documentation efforts. 
 
 New Proposal:
-Database credentials rotaion process will be automated through a secured Vault Secret Provider(VSP) API which acts as an intermediator between Vault and consumer APIs.
+Database credentials rotaion process will be automated through a secured Vault Secret Provider(VSP) API which acts as a middleware service between Vault and consumer API's.
 VSP can be used to fetch encrypted database credentials dynamically during datasource initialization.
-VSP monitors vault secrates and refreshes application's datasource dynamically whenever credentials are updated.
+VSP monitors vault secrets and refreshes application datasource dynamically whenever credentials are updated.
 Flow: AIM -> Vault -> VSP -> Consumer API's.
 Advantages: No application restart/downtime, no manual intervention, no database user locks and no documentations. 
 Technologies: Vault, AIM, Spring, Java, PCF.
