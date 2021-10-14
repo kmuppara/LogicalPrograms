@@ -1,0 +1,33 @@
+git clone url -b <BRANCH>
+git add .
+git commit -m <MESSAGE>
+git push
+git-checkout -> switch branches or restore working tree files
+ex: git checkout -- <FILENAME>
+
+How do I see local committed files before push?
+1. git log to display all the commit_id, the first one is the last commit_id, copy it.
+2. git show commit_id --name-only to display all the files committed in the specified commit
+3. Undo the last commit with git reset --soft HEAD~1, move the mistakenly committed files from staging area.
+
+Revert locally committed files:
+1. git commit -m <MESSAGE>
+2. git reset HEAD~
+Revert github pushed changes:
+1. git revert -m 1 <COMMIT_ID>
+2. git push
+
+Switching remove URLs from ssh to https:
+git remote -v
+git remote set-url origin <https_url or ssh_url>
+
+Merge conflicts:
+git checkout master
+git pull
+git checkout <BRANCH>
+git merge master
+<.....RESOLVE CONFLICTS IN THE FILES....>
+git commit
+git push
+
+
