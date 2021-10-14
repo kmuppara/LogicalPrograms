@@ -1,0 +1,9 @@
+1. Java not found
+      export PATH=$PATH:"/c/Program Files/Java/jdk1.8.0/bin/"
+2. Spring boot plugin requires gradle 4.10 or later. The current version is gradle 4.7
+      ./gradlew clean build -x test
+      ./gradlew --refresh-dependencies
+      ./gradlew -q dependencies > dependencies_tree.txt
+3. Login PCF from gitbash
+      export https_proxy=<PROXY_URL>
+      cf login -a <CLOUD_URL>
